@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker run --rm -v "$(pwd)/output:/app/output" r-ggplot-app
+docker run --rm  -v "$(pwd):/app" -v "$(pwd)/output:/app/output" r-ggplot-app
 
 

@@ -5,7 +5,7 @@ library(ggplot2)
 p <- ggplot(data = mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +
   geom_point(size = 3) +
   labs(title = "Eficiencia de combustible vs. Peso del auto",
-       x = "Peso (1000 lbs)",
+       x = "Peso (1000 lbs 22222)",
        y = "Millas por galón (mpg)",
        color = "Cilindros") +
   theme_minimal()
