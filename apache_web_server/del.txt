@@ -1,0 +1,5 @@
+docker rm -f admiring_tu
+docker container ls
+docker images
+docker rmi -f ubuntu:latest
+

@@ -1,0 +1,22 @@
+# library
+library(ggplot2)
+
+# basic graph
+p <- ggplot(mtcars, aes(x = wt, y = mpg)) + 
+  geom_point()
+
+print('hola')
+
+print(p)
+
+ggsave(
+  filename = "mi_imagen.png", 
+  plot = p, 
+  device = "png", 
+  path = "/app/output" # Use an absolute path inside your container
+)
+
+print('salvado')
+
+
+

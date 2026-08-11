@@ -1,0 +1,13 @@
+# Use the official R base image
+FROM rocker/r-base:latest
+
+# Set the working directory inside the container
+WORKDIR /usr/local/src/myscripts
+
+# Copy your local R script into the container
+COPY script.R .
+
+# Run the R script when the container starts
+CMD ["Rscript", "script.R"]
+
+

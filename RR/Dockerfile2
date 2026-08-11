@@ -1,0 +1,17 @@
+FROM rocker/r-base:latest
+
+# Install system dependencies that R packages might need
+RUN apt-get update && apt-get install -y \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libxml2-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install R packages
+RUN Rscript -e "install.packages(c('ggplot2', 'dplyr'), repos='https://r-project.org')"
+
+WORKDIR /usr/local/src/myscripts
+COPY script.R .
+CMD ["Rscript", "script.R"]
+
+

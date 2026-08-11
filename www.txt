@@ -1,0 +1,49 @@
+xx
+xx
+xx
+
+https://guias.donweb.com/instalar-docker-y-crear-un-contenedor-en-ubuntu-20-04/
+
+https://imaginaformacion.com/tutoriales/crear-contenedor-docker
+
+https://www.redhat.com/es/topics/containers/what-is-docker
+
+https://spectralops.io/blog/dockerfile-workdir-how-to-get-started-and-advanced-usage/
+
+
+https://coffeebytes.dev/es/docker-compose-tutorial-con-comandos-en-gnu-linux/
+
+sudo docker run ubuntu_test python3 --version
+
+docker rmi -f <image_id> 
+
+sudo docker run ubuntu_test apt list --installed
+
+https://colaboratorio.net/davidochobits/sysadmin/2018/crear-imagenes-medida-docker-dockerfile/
+
+docker images
+
+
+
+https://www.hostinger.mx/tutoriales/como-crear-contenedor-docker
+
+
+
+https://www.ionos.mx/digitalguide/servidores/know-how/comandos-de-docker/
+https://www.hostinger.mx/tutoriales/comandos-docker
+
+
+docker build -t python-test .
+docker run python-test
+
+
+https://www.freecodecamp.org/espanol/news/guia-de-docker-para-principiantes-como-crear-tu-primera-aplicacion-docker/
+
+https://www.oracle.com/mx/cloud/cloud-native/container-registry/what-is-docker/
+
+https://www.redhat.com/es/topics/containers/what-is-docker
+
+https://cerebro-digital.com/panel/knowledgebase/64/ExportarorImportar-contenedor-de-Docker-via-archivo-TAR.html
+
+
+
