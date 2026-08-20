@@ -1,0 +1,7 @@
+t = seq(0,6*pi, .1)
+x = cos(t)
+
+png(filename="/output/name.png")
+plot(t,x, type='l')
+dev.off()
+
