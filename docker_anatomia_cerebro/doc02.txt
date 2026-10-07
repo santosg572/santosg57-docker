@@ -1,0 +1,41 @@
+To use Ubuntu, Apache, and Docker together, you can create a Docker image based on Ubuntu that includes the Apache web server.
+1. Using the Official ubuntu/apache2 Docker Image:
+Canonical provides an official Docker image for Apache2 based on Ubuntu on Docker Hub. This image is maintained and receives security updates. Pulling the image.
+Código
+
+    docker pull ubuntu/apache2
+Running a container.
+Código
+
+    docker run -d -p 80:80 ubuntu/apache2
+This command runs the container in detached mode (-d) and maps port 80 of the host to port 80 of the container (-p 80:80).
+2. Building a Custom Docker Image with Apache on Ubuntu:
+You can create your own Dockerfile to build a custom image with specific configurations or additional software. Create a Dockerfile.
+Código
+
+    FROM ubuntu:latest
+
+    RUN apt-get update && \
+        apt-get install -y apache2 && \
+        apt-get clean && \
+        rm -rf /var/lib/apt/lists/*
+
+    EXPOSE 80
+
+    CMD ["apache2ctl", "-D", "FOREGROUND"]
+FROM ubuntu:latest: Sets the base image to the latest Ubuntu version.
+RUN apt-get update && apt-get install -y apache2: Updates package lists and installs Apache2.
+EXPOSE 80: Informs Docker that the container listens on port 80 at runtime.
+CMD ["apache2ctl", "-D", "FOREGROUND"]: Specifies the command to run when the container starts, launching Apache in the foreground.
+Build the image:
+Código
+
+    docker build -t my-apache-ubuntu .
+This command builds an image named my-apache-ubuntu from the Dockerfile in the current directory.
+Run a container from your custom image:
+Código
+
+    docker run -d -p 8080:80 my-apache-ubuntu
+This runs your custom image, mapping host port 8080 to container port 80.
+3. Accessing the Web Server:
+After running the container, you can access the Apache web server by navigating to http://localhost (if mapped to port 80) or http://localhost:8080 (if mapped to port 8080) in your web browser.

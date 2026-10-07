@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Personal</title>
+    <style>
+        /* Variables de color */
+        :root {
+            --color-principal: #2563eb;
+            --color-oscuro: #1e293b;
+            --color-claro: #f8fafc;
+            --color-texto: #334155;
+            --color-texto-mutado: #64748b;
+        }
+
+        /* Estilos Generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--color-claro);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+
+        .contenedor {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Encabezado / Perfil */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .foto-perfil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--color-principal);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--color-oscuro);
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        .subtitulo {
+            color: var(--color-principal);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Secciones */
+        section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--color-oscuro);
+            border-bottom: 2px solid var(--color-claro);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        /* Listas y Etiquetas */
+        .lista-intereses {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .interes-tag {
+            background-color: #eff6ff;
+            color: var(--color-principal);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Enlaces de Contacto */
+        .enlaces-contacto {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--color-oscuro);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--color-principal);
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            color: var(--color-texto-mutado);
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        
+        <!-- Encabezado -->
+        <header>
+            <!-- Reemplaza la URL de abajo por el enlace de tu foto -->
+            <img src="https://placeholder.com" alt="Tu Nombre" class="foto-perfil">
+            <h1>Anatomía del Cerebro</h1>
+            <p class="subtitulo">Tu Profesión / Ocupación / <a href="lobulo_frontal.html">Lóbulo Frontal</a> </p>
+            <p>Una breve frase o lema personal que te defina de forma rápida.</p>
+        </header>
+
+        <!-- Sobre mí -->
+        <section>
+            <h2>Sobre Mí</h2>
+            <p>Escribe aquí un par de párrafos sobre quién eres, qué haces y qué te 
+apasiona. Cuéntale al mundo tu trayectoria, tus metas o los proyectos en los que te 
+gusta trabajar de manera cercana y profesional.</p>
+        </section>
+
+        <!-- Intereses o Habilidades -->
+        <section>
+            <h2>Mis Áreas de Interés</h2>
+            <p>Estas son algunas de las tecnologías, pasatiempos o temas que más me 
+llaman la atención actualmente:</p>
+            <ul class="lista-intereses">
+                <li class="interes-tag">Desarrollo Web</li>
+                <li class="interes-tag">Diseño UI/UX</li>
+                <li class="interes-tag">Fotografía</li>
+                <li class="interes-tag">Escritura</li>
+                <li class="interes-tag">Tecnología</li>
+            </ul>
+        </section>
+
+        <!-- Contacto -->
+        <section style="text-align: center;">
+            <h2>¿Hablamos?</h2>
+            <p>Si quieres colaborar en un proyecto, tienes alguna pregunta o simplemente 
+quieres saludar, puedes encontrarme en mis redes:</p>
+            <div class="enlaces-contacto">
+                <a href="mailto:tu-correo@email.com" class="btn">Correo Electrónico</a>
+                <a href="https://linkedin.com" target="_blank" class="btn">LinkedIn</a>
+                <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+            </div>
+        </section>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>© 2026 Tu Nombre. Todos los derechos reservados.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
